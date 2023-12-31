@@ -8,6 +8,7 @@ const NewTodoForm = (props) => {
 
   // create state for form data values
   const [formData, setFormData] = useState(INITIAL_STATE);
+
   //   keep form values current in state formData by updating on every change
   const handleChange = (evt) => {
     const { name, value } = evt.target;
@@ -25,8 +26,8 @@ const NewTodoForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Add Todo</h3>
-      <label htmlFor='task'>New Todo</label>
+      <h3>More Todo</h3>
+      <label htmlFor='task'>Todo</label>
       <input
         id='task'
         type='text'

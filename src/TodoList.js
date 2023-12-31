@@ -5,20 +5,7 @@ import { v4 as uuid } from "uuid";
 
 const TodoList = (props) => {
   // set state of todos
-  const [todos, setTodos] = useState([
-    {
-      id: uuid(),
-      task: "Brush your teeth",
-    },
-    {
-      id: uuid(),
-      task: "Clean your room",
-    },
-    {
-      id: uuid(),
-      task: "Eat your dinner",
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
     todo.id = uuid();
@@ -37,6 +24,7 @@ const TodoList = (props) => {
         {todos.map((todo) => (
           <Todo
             id={todo.id}
+            key={todo.id}
             task={todo.task}
             removeTodo={removeTodo}
           />
