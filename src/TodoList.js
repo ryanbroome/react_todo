@@ -32,10 +32,7 @@ const TodoList = (props) => {
 
   return (
     <>
-      <NewTodoForm
-        addTodo={addTodo}
-        removeTodo={removeTodo}
-      />
+      <NewTodoForm addTodo={addTodo} />
       <ul className='TodoList'>
         {todos.map((todo) => (
           <Todo
